@@ -33,13 +33,13 @@ Create the following tables for the Zoos and Bears collection.
 
 Zoos Table should have the following columns:
 
-- id: primary key, automincrements.
+- id: primary key, autoincrements.
 - name: unique, alphanumeric up to 255 characters long.
 - created_at: should automatically default to the current date and time.
 
 Bears Table should have the following columns:
 
-- id: primary key, automincrements.
+- id: primary key, autoincrements.
 - zooId: an integer that relates this table to the zoos table. Enforce data integrity.
 - species: unique, alphanumeric up to 80 characters long.
 - latinName: alphanumeric up to 80 characters long.
@@ -50,7 +50,7 @@ Bears Table should have the following columns:
 When the client makes a `POST` request to `/api/zoos` a new _zoo_ should be created in the zoos table:
 
 - Ensure the client passes a name parameter in the request body. If there's an error, respond with an appropriate status code, and send a JSON response of the form `{ error: "Some useful error message" }`.
-- return de `id` of the inserted zoo.
+- return the `id` of the inserted zoo.
 
 ### `GET /zoos`
 
